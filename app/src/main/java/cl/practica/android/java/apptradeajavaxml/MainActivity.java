@@ -1,7 +1,9 @@
 package cl.practica.android.java.apptradeajavaxml;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
         btnCrearCuenta = findViewById(R.id.btnCrearCuenta);
 
+        btnIniciarSesion.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MainActivity.this, IniciarSesion.class);
+            startActivity(intent);
+
+        });
+
+        btnCrearCuenta.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MainActivity.this, CrearCuenta.class);
+            startActivity(intent);
+
+        });
 
 
     }

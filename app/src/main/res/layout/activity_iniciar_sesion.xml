@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearCuenta">
+    tools:context=".IniciarSesion">
 
     <TextView
-        android:id="@+id/tvTituloNombreApp"
+        android:id="@+id/tvTituloNombreAppIniciar"
         style="@style/app_name_init_black_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,42 +19,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvTituloCrearCuenta"
+        android:id="@+id/tvTituloIniciarSesion"
         style="@style/title1_bold_black_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        android:text="@string/sign_up"
+        android:text="@string/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloNombreApp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloNombreAppIniciar" />
 
     <EditText
-        android:id="@+id/etNombre"
+        android:id="@+id/etUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloCrearCuenta" />
-
-    <EditText
-        android:id="@+id/etCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="28dp"
         android:ems="10"
         android:hint="Correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloIniciarSesion"/>
 
     <EditText
-        android:id="@+id/etClave"
+        android:id="@+id/etClaveIniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="28dp"
@@ -63,16 +51,17 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
 
     <Button
-        android:id="@+id/btnCreacionCuenta"
+        android:id="@+id/btnIniciaSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        android:text="@string/sign_up"
+        android:text="@string/sign_in"
         android:backgroundTint="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etClave" />
+        app:layout_constraintTop_toBottomOf="@+id/etClaveIniciar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
