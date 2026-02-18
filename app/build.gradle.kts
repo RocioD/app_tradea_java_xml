@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "cl.practica.android.java.apptradeajavaxml"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "cl.practica.android.java.apptradeajavaxml"

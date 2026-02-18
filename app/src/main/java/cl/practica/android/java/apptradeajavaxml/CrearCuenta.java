@@ -52,6 +52,8 @@ public class CrearCuenta extends AppCompatActivity {
                 while ((linea = bufferedReader.readLine()) != null){
                     String usuario[] = linea.split(";");
                     usuarios.put(usuario[1], usuario[0]);
+                    Usuario user = new Usuario(usuario[0], usuario[1], usuario[2]);
+                    ListaUsuarios.listaUsuarios.add(user);
                     contenidoCompleto.append(linea).append("\n");
                 }
                 datosCompletos = contenidoCompleto.toString();
@@ -71,9 +73,11 @@ public class CrearCuenta extends AppCompatActivity {
         btnCrear = findViewById(R.id.btnCreacionCuenta);
 
         btnCrear.setOnClickListener(v -> {
-            String strNombre = etNombre.toString().trim();
-            String strCorreo = etCorreo.toString().trim();
-            String strClave = etClave.toString();
+            String strNombre = etNombre.getText().toString().trim();
+            String strCorreo = etCorreo.getText().toString().trim();
+            String strClave = etClave.getText().toString().trim();
+
+            Log.i("DATOSSSSSS", strNombre + strCorreo + strClave);
 
             if (strNombre.isBlank() || strCorreo.isBlank() || strClave.isBlank()){
                 String mensaje = "Error, hay campos vacíos";

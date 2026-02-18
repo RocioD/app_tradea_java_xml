@@ -45,6 +45,8 @@ public class IniciarSesion extends AppCompatActivity {
                 StringBuilder contenidoCompleto = new StringBuilder();
                 while ((linea = bufferedReader.readLine()) != null){
                     String usuario[] = linea.split(";");
+                    Usuario user= new Usuario(usuario[0], usuario[1], usuario[2]);
+                    ListaUsuarios.listaUsuarios.add(user);
                     contenidoCompleto.append(linea).append("\n");
                 }
                 datosCompletos = contenidoCompleto.toString();
@@ -59,8 +61,10 @@ public class IniciarSesion extends AppCompatActivity {
         btnIniciarSesion = findViewById(R.id.btnIniciaSesion);
 
         btnIniciarSesion.setOnClickListener(v -> {
-            String strCorreo = etUsuario.toString().trim();
-            String strClave = etClave.toString().trim();
+            String strCorreo = etUsuario.getText().toString().trim();
+            String strClave = etClave.getText().toString().trim();
+
+            boolean inicioCorrecto = false;
 
             if (strCorreo.isBlank() || strClave.isBlank()){
                 String mensaje = "Error, hay campos vacíos";
@@ -74,13 +78,16 @@ public class IniciarSesion extends AppCompatActivity {
                             Intent intent = new Intent(IniciarSesion.this, PaginaInicio.class);
                             intent.putExtra("nombre", usuario.getNombre());
                             startActivity(intent);
+                            inicioCorrecto = true;
                         } else {
                             break;
                         }
                     }
                 }
-                String mensaje = "Usuario o clave incorrecta";
-                Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+                if (!inicioCorrecto){
+                    String mensaje = "Usuario o clave incorrecta";
+                    Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
