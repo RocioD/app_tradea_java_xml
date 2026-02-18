@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppTradea Java XML</string>
+    <string name="app_title">Tradea Facil</string>
+    <string name="app_description">Una app donde puedes realizar transferencias facilmente y gestionar tu dinero</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="sign_up">Crear cuenta</string>
+</resources>

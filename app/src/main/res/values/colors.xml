@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary900">#4D0680</color>
+    <color name="primary800">#6B0D8D</color>
+    <color name="primary700">#7B1195</color>
+    <color name="primary">#8D179D</color>
+    <color name="primary500">#9B1AA2</color>
+    <color name="primary400">#AA3FB0</color>
+    <color name="primary300">#B962BE</color>
+    <color name="primary200">#CE8FD0</color>
+    <color name="primary100">#E1BCE2</color>
+    <color name="primary50">#F3E4F3</color>
+
+    <color name="secondary900">#F08936</color>
+    <color name="secondary800">#F7AF43</color>
+    <color name="secondary700">#FBC54B</color>
+    <color name="secondary">#FFDD54</color>
+    <color name="secondary500">#F9E752</color>
+    <color name="secondary400">#FBEC69</color>
+    <color name="secondary300">#FEF183</color>
+    <color name="secondary200">#FEF5A6</color>
+    <color name="secondary100">#FFFAC9</color>
+    <color name="secondary50">#FFFEEA</color>
+</resources>
